@@ -1,0 +1,66 @@
+body {
+    display: grid;
+    background-color: #FFFFFF;
+    grid-template-columns: auto;
+    grid-template-rows: 20vh 60vh auto;
+    grid-template-areas: 
+    "menu" 
+    "conteudo" 
+    "rodape";
+
+
+}
+body header {
+    grid-area: menu;
+    background-color: #2B2E4A;
+    display: grid;
+    grid-template-areas: "titulo menu";
+    grid-template-rows: 30vw auto;
+    align-items: baseline;
+
+}
+
+body header h1 {
+    grid-area: titulo;
+    color: white;
+    
+
+}
+
+body header nav {
+    grid-area: menu;
+    color: rgb(182, 7, 7);
+
+    
+
+}
+
+nav ul {
+    display: grid;
+    grid-auto-flow: column;
+    list-style-type: none;
+    grid-auto-columns: 25vw;
+
+
+}
+
+
+
+
+body article {
+    grid-area: conteudo;
+    background-color: #E84545;
+
+    }
+body footer {
+    grid-area: rodape;
+    background-color: #53354A;
+
+}
+
+ul{
+    margin: 0;
+
+    box-sizing: border-box;
+}
+    
