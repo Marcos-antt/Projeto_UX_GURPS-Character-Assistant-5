@@ -9,14 +9,34 @@
 </head>
 <body>
     <header>
-        <h1>LOGO GURPS</h1>
-        <nav>
-            <ul>
-                <li><a href="#popup1"> Criar Ficha </a></li>
-                <li><a href="#popup2"> Baú de Fichas </a></li>
-                <li><a href="#popup3"> Sair </a></li>
-            </ul>
-        </nav>      
+        <div class="logoGurps">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logoGurps.png') }}" alt="">
+            </div>
+            <h1>GURPS Character Assistant 5</h1>
+        </div>
+        
+        <div class="criar">
+            <a class="botaomenu" href="#popup1"> 
+                <img src="{{ url_for('static', filename='img/escudo.png') }}" alt="">
+                <div class="menutxt">Criar Ficha</div> 
+            </a>
+        </div>
+
+        <div class="bau">
+            <a class="botaomenu" href="#popup2"> 
+                <img src="{{ url_for('static', filename='img/bau.png') }}" alt="">
+                <div class="menutxt">Baú de Fichas</div> 
+            </a>
+        </div>
+        <div class="sair">
+            <a class="botaomenu" href="#popup3"> 
+                <img src="{{ url_for('static', filename='img/porta.png') }}" alt="">
+                <div class="menutxt">Sair</div> 
+            </a>
+        </div>
+
+              
         <div id="popup1" class="overlay">
             <div class="popup">
                 <h2>Pontos da Campanha</h2>
@@ -25,23 +45,26 @@
         </div>
         <div id="popup2" class="overlay">
             <div class="popup">
-                <h2>Bau de Fichas!</h2>
+                <h2>Bau de Fichas</h2>
                 <a class="close" href="#">&times;</a>
                 <div class="content">         
                 </div>
             </div>
         </div>
         <div id="popup3" class="overlay">
-            <div class="popup">
-                <h2>Você Saiu!</h2>
-                <a class="close" href="#">&times;</a>
-                <div class="content">         
-                </div>
+            <div class="popup3">
+                <h2>Até breve aventureiro!!</h2>
+
             </div>
         </div>
         
     </header>
-    <article>conteudo</article>
+    <article>
+        <div class="backgroundgurps"> 
+            <img id="backgroundgurps_img" src="{{ url_for('static', filename='img/backgroundgurps.jpg') }}" alt="">
+        </div>
+
+    </article>
     <footer>fim da pagina</footer>
     
 </body>

@@ -1,64 +1,98 @@
 body {
-    display: grid;
-    background-color: #FFFFFF;
-    grid-template-columns: auto;
-    grid-template-rows: 20vh 60vh auto;
-    grid-template-areas: 
-    "menu" 
-    "conteudo" 
-    "rodape";
+  margin: 0;
+  display: grid;
+  background-color: #FFFFFF;
+  grid-template-rows: 1fr 3.8fr 0.2fr;
+  grid-template-areas: "menu"
+      "conteudo"
+      "rodape";
 
 
 }
+.logoGurps, .criar, .bau, .sair{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+.logo img{
+  width: 13vw;
+}
+
+.logoGurps h1{
+  grid-area: titulo;
+  color: white;
+  font-size: 1.7vw;
+  margin: 0;
+}
+
+
 body header {
-    grid-area: menu;
-    background-color: #2B2E4A;
-    display: grid;
-    grid-template-areas: "titulo menu";
-    grid-template-rows: 30vw auto;
-    align-items: baseline;
+  grid-area: menu;
+  background-color: rgba(0, 0, 0, 0.26);
+  display: grid;
+  grid-template-areas: "titulo criar bau sair";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  height: 20vh;
 
 }
 
-body header h1 {
-    grid-area: titulo;
-    color: white;
-    
+.criar{
+  grid-area: criar;
+}
+.bau{
+  grid-area: bau;
+}
+.sair{
+  grid-area: sair;
+}
+
+.botaomenu{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
 
 }
 
-body header nav {
-    grid-area: menu;
-    color: rgb(182, 7, 7);
-
-    
+.botaomenu img{
+  width: 5vw;
 
 }
+.menutxt{
+  font-size: 2vw;
+  color: black;
+  font-weight: bolder;
+}
+.backgroundgurps{
+  display: flex;
+  justify-content: center;
+}
 
-nav ul {
-    display: grid;
-    grid-auto-flow: column;
-    list-style-type: none;
-    grid-auto-columns: 25vw;
-
-
+#backgroundgurps_img{
+  width: 77.5vw;
 }
 
 body article {
     grid-area: conteudo;
-    background-color: #E84545;
+    background-color: #671814;
 
     }
 body footer {
     grid-area: rodape;
     background-color: #53354A;
 
-}
-
-ul{
-    margin: 0;
-
-    box-sizing: border-box;
 }
 
 .overlay {
@@ -81,16 +115,23 @@ ul{
     margin: 70px auto;
     padding: 20px;
     background: #fff;
-    border-radius: 5px;
     width: 30%;
     position: relative;
     transition: all 5s ease-in-out;
   }
+
+  .popup3 {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    width: 20vw;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
   
-  .popup h2 {
+  .h2 {
     margin-top: 0;
     color: #333;
-    font-family: Tahoma, Arial, sans-serif;
   }
   .popup .close {
     position: absolute;
