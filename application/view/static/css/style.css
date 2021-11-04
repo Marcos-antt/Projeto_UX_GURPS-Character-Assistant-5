@@ -91,8 +91,19 @@ body article {
     }
 body footer {
     grid-area: rodape;
-    background-color: #53354A;
+    background-color: #000000;
 
+}
+
+.menupopup1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.menupopup2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .overlay {
@@ -159,4 +170,16 @@ body footer {
       width: 70%;
     }
   }
+.endfooter{
+  display: flex;
+  color: #ffffff;
+  font-family: "Roboto Condensed",Roboto,Helvetica,sans-serif;
+  font-size: 12px;
+  line-height: 2.14vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
     
