@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
     <title>GURPS</title>
 </head>
+
 <body>
     <header>
         <div class="logoGurps">
@@ -15,61 +17,367 @@
             </div>
             <h1>GURPS Character Assistant 5</h1>
         </div>
-        
+
         <div class="criar">
-            <a class="botaomenu" href="#popup1"> 
+            <a class="botaomenu" href="#ficha">
                 <img src="{{ url_for('static', filename='img/escudo.png') }}" alt="">
-                <div class="menutxt">Criar Ficha</div> 
+                <div class="menutxt">Criar Ficha</div>
+
             </a>
         </div>
 
         <div class="bau">
-            <a class="botaomenu" href="#popup2"> 
+            <a class="botaomenu" href="#bau">
                 <img src="{{ url_for('static', filename='img/bau.png') }}" alt="">
-                <div class="menutxt">Baú de Fichas</div> 
+                <div class="menutxt">Baú de Fichas</div>
             </a>
         </div>
         <div class="sair">
-            <a class="botaomenu" href="#popup3"> 
+            <a class="botaomenu" href="#sair">
                 <img src="{{ url_for('static', filename='img/porta.png') }}" alt="">
-                <div class="menutxt">Sair</div> 
+                <div class="menutxt">Sair</div>
             </a>
         </div>
 
-              
-        <div id="popup1" class="overlay">
+        <div id="bau" class="overlay">
             <div class="popup">
-                <div class="menupopup1"><h2>Pontos da Campanha</h2></div>
+                <div class="menupopup2">
+                    <h2>Baú de Fichas</h2>
+                </div>
                 <a class="close" href="#">&times;</a>
-            </div>
-        </div>
-        <div id="popup2" class="overlay">
-            <div class="popup">
-                <div class="menupopup2"><h2>Baú de Fichas</h2></div>
-                <a class="close" href="#">&times;</a>
-                <div class="content">         
+                <div class="content">
                 </div>
             </div>
         </div>
-        <div id="popup3" class="overlay">
+        <div id="sair" class="overlay">
             <div class="popup3">
                 <h2>Até breve aventureiro!!</h2>
-
             </div>
         </div>
-        
+        <!-- POPUP Pontos da Campanha-->
+        <div id="ficha" class="overlay">
+            <div class="popup">
+                <div class="menupopup1">
+                    <h2>Pontos da Campanha</h2>
+                </div>
+                <a class="close" href="#">&times;</a>
+                <form action="#infoficha" class="pts">
+                    <input type="text" name="" id="campo">
+                    <button class=confirmar>CONFIRMAR</button>
+                </form>
+            </div>
+        </div>
+        <!-- POPUP Informações do Personagem -->
+        <div id="infoficha" class="overlay">
+            <div class="popup">
+                <div class="menupopup1">
+                    <a class="close" href="#">&times;</a>
+                </div>
+                <div class="menupopup1">
+                    <h2>Informações do Personagem</h2>
+                </div>
+                <div class="nome">
+                    <form action="" class="nome">
+                        <label for="name">Nome Personagem</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Nome do Jogador</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+
+                <div class="nome">
+                    <form action="" class="nome">
+                        <label for="name">Altura</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+
+                <div class="nome">
+                    <form action="" class="nome">
+                        <label for="name">Peso</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+
+                <div class="nome">
+                    <form action="" class="nome">
+                        <label for="name">Tamanho</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+
+                <div class="nome">
+                    <form action="" class="nome">
+                        <label for="name">Modificador de Tamanho</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+
+                <div class="nome">
+                    <form action="" class="nome">
+                        <label for="name">Idade</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+
+                <div class="nome">
+                    <form action="" class="nome">
+                        <label for="name">Pontos Disponíveis</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+
+                <div class="nome">
+                    <form action="" id="nome">
+                        <label for="message">Descreve a Aparência do Personagem</label>
+                        <textarea type="text" id="campoAparencia"></textarea>
+                    </form>
+                </div>
+                <div class="botoesficha">
+                    <form action="#ficha">
+                        <button class=confirmar>Voltar</button>
+                    </form>
+                    <form action="#fichah1" class="pts">
+                        <button class=confirmar>Próximo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- POPUP Habilidades do Personagem -->
+        <div id="fichah1" class="overlay">
+            <div class="popup">
+                <div class="menupopup1">
+                    <a class="close" href="#">&times;</a>
+                </div>
+                <div class="menupopup1">
+                    <h2>Habilidades do Personagem</h2>
+                </div>
+                <div class="nome">
+                    <form action="" class="nome">
+                        <label for="name">Força</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Destreza</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Inteligência</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Vitalidade </label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Pontos de Vida </label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Determinação </label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Percepção</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Pontos de Fadiga</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="nome">
+                    <form action="" id="nome">
+                        <label for="message">Idiomas que o Pesonagem Possui</label>
+                        <textarea type="text" id="campotxt"></textarea>
+                    </form>
+                </div>
+                <div class="nome">
+                    <form action="" id="cultura">
+                        <label for="message">Cultura</label>
+                        <textarea type="text" id="campotxt"></textarea>
+                    </form>
+                </div>
+                <div class="botoesficha">
+                    <form action="#infoficha">
+                        <button class=confirmar>Voltar</button>
+                    </form>
+                    <form action="#habilidadeficha1" class="pts">
+                        <button class=confirmar>Próximo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- POPUP Habilidades do Personagem1 -->
+        <div id="habilidadeficha1" class="overlay">
+            <div class="popup">
+                <div class="menupopup1">
+                    <a class="close" href="#">&times;</a>
+                </div>
+                <div class="menupopup1">
+                    <h2>Habilidades do Personagem</h2>
+                </div>
+                <div class="nome">
+                    <form action="" class="nome">
+                        <label for="name">Base de Carga</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Velocidade Básica</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Deslocamento Básico</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div>
+                    <h2 class="menupopup3">Base de Carga do Personagem</h2>
+                </div>
+
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Leve </label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Média</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Pesada </label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="jogador">
+                    <form action="">
+                        <label for="name">Muito Pesada</label>
+                        <input type="text" name="" id="camponome">
+                </div>
+                <div class="botoesficha">
+                    <form action="#fichah1" class="pts">
+                        <button class="confirmar">voltar</button>
+                    </form>
+                    <form action="#vantagensficha" class="pts">
+                        <button class="confirmar">Próximo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- POPUP Vantagens/Desvantagens do Personagem -->
+        <div id="vantagensficha" class="overlay">
+            <div class="popup">
+                <div class="menupopup1">
+                    <a class="close" href="#">&times;</a>
+                </div>
+                <div class="menupopup1">
+                    <h2>Vantagens e Desvantagens</h2>
+                </div>
+
+                <div class="nome">
+                    <form action="" id="cultura">
+                        <label for="message">Vantagens e Qualidades </label>
+                        <textarea type="text" id="campotxt1"></textarea>
+                    </form>
+                </div>
+
+                <div class="nome">
+                    <form action="" id="cultura">
+                        <label for="message">Desvantagens e Peculiariedades </label>
+                        <textarea type="text" id="campotxt1"></textarea>
+                    </form>
+                </div>
+
+                <div class="nome">
+                    <form action="" id="cultura">
+                        <label for="message">Perícias </label>
+                        <textarea type="text" id="campotxt1"></textarea>
+                    </form>
+                </div>
+
+                <div class="botoesficha">
+                    <form action="#habilidadeficha1">
+                        <button class=confirmar>Voltar</button>
+                    </form>
+                    <form action="#Equipamentoficha" class="pts">
+                        <button class=confirmar>Próximo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- POPUP Armas do Personagem -->
+        <div id="Equipamentoficha" class="overlay">
+            <div class="popup">
+                <div class="menupopup1">
+                    <a class="close" href="#">&times;</a>
+                </div>
+                <div class="menupopup1">
+                    <h2>Armas e Armaduras</h2>
+                </div>
+
+                <div class="nome">
+                    <form action="" id="cultura">
+                        <label for="message">Armas de Corpo a Corpo</label>
+                        <textarea type="text" id="campotxt1"></textarea>
+                    </form>
+                </div>
+
+                <div class="nome">
+                    <form action="" id="cultura">
+                        <label for="message">Armas de Combate à Distância</label>
+                        <textarea type="text" id="campotxt1"></textarea>
+                    </form>
+                </div>
+
+                <div class="nome">
+                    <form action="" id="cultura">
+                        <label for="message">Armaduras e Equipamentos </label>
+                        <textarea type="text" id="campotxt1"></textarea>
+                    </form>
+                </div>
+
+                <div class="botoesficha">
+                    <form action="#vantagensficha">
+                        <button class=confirmar>Voltar</button>
+                    </form>
+                    <form action="#fichafim" class="pts">
+                        <button class=confirmar>Finalizar Ficha</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- POPUP Ficha Finalizada-->
+        <div id="fichafim" class="overlay">
+            <div class="popup">
+                <div class="menupopup1">
+                    <div class="">
+                        <div class="fichaconcluida">
+                            <h2>Ficha Concluída!</h2><img>
+                            <img class="imgdone" src="{{ url_for('static', filename='img/done.png') }}" alt="">
+                        </div>
+
+                    </div>
+                    <a class="close" href="#">&times;</a>
+                </div>
+            </div>
     </header>
     <article>
-        <div class="backgroundgurps"> 
+        <div class="backgroundgurps">
             <img id="backgroundgurps_img" src="{{ url_for('static', filename='img/backgroundgurps.jpg') }}" alt="">
         </div>
 
     </article>
     <footer>
         <div class="endfooter">
-        ©2021 GURPS Character Assistant 5  | All Rights Reserved
-    </div>
+            ©2021 GURPS Character Assistant 5 | All Rights Reserved
+        </div>
     </footer>
-    
+
 </body>
+
 </html>

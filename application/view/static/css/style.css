@@ -15,7 +15,6 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-
 .logo{
   display: flex;
   flex-direction: row;
@@ -23,6 +22,22 @@ body {
   align-items: center;
   }
 
+  .change-my-color {
+    fill: green;
+  }
+
+.fichaconcluida{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 13.5vw;
+  height: 9vw;
+}
+
+.imgdone{
+  background-color: #0aed0c;
+}
 .logo img{
   width: 13vw;
 }
@@ -90,25 +105,109 @@ body article {
 
     }
 body footer {
-    grid-area: rodape;
-    background-color: #000000;
-
+  display: flex;
+  grid-area: rodape;
+  background-color: #000000;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .menupopup1{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  font-size: 2vh;
 }
+
 .menupopup2{
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
+.menupopup3{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 2.3vh;
+}
+#campo{
+  border-radius: 2vw;
+  text-align: center;
+}
+#camponome{
+  border-radius: 2vw;
+  text-align: center;
+}
+
+#campoAparencia{
+  height: 7vw;
+  border-radius: 1.5vw;
+  text-align: center;
+  width: 20vw;
+}
+
+#campotxt{
+  height: 3vw;
+  border-radius: 1.5vw;
+  text-align: center;
+  width: 20vw;
+}
+
+#campotxt1{
+  height: 10vw;
+  border-radius: 1.5vw;
+  text-align: center;
+  width: 20vw;
+}
+
+#cultura{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.botoesficha{
+  display: flex;
+  flex-direction: row;
+  height: 5vw;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 15vh;
+  justify-content: space-around;
+}
+
+.nome{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  justify-content: space-around;
+}
+
+.jogador{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  justify-content: space-around;
+}
+
+.confirmar{
+  border-radius: 2vw;
+  background-color: #0aed0c;
+}
+
 .overlay {
     position: fixed;
-    top: 0;
+    top: -4vw;
     bottom: 0;
     left: 0;
     right: 0;
@@ -117,16 +216,19 @@ body footer {
     visibility: hidden;
     opacity: 0;
   }
+
+  
+
   .overlay:target {
     visibility: visible;
     opacity: 1;
   }
   
   .popup {
-    margin: 70px auto;
-    padding: 20px;
+    margin: 10vw auto;
+    padding: 1vw;
     background: #fff;
-    width: 30%;
+    width: 20vw;
     position: relative;
     transition: all 5s ease-in-out;
   }
